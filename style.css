@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000000;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 45px 20px;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.logo {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 22px;
+    color: #bdbdbd;
+}
+
+
+/* ================= CERTIFICATE CARD ================= */
+
+.certificate-card {
+    width: 100%;
+    max-width: 650px;
+
+    background: #111111;
+
+    border-radius: 20px;
+
+    padding: 45px;
+
+    border: 1px solid #333333;
+
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.08);
+}
+
+
+/* ================= VALID BOX ================= */
+
+.valid-box {
+    background: #123d27;
+
+    border: 1px solid #1f8f50;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+
+    color: #4ade80;
+}
+
+.valid-box span {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.valid-box div {
+    display: flex;
+    flex-direction: column;
+}
+
+.valid-box strong {
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+
+/* ================= DETAILS ================= */
+
+.details {
+    width: 100%;
+}
+
+.detail-row {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 25px;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid #333333;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.label {
+    font-size: 18px;
+    font-weight: bold;
+
+    color: #bdbdbd;
+
+    min-width: 150px;
+}
+
+.value {
+    font-size: 18px;
+
+    color: #ffffff;
+
+    text-align: right;
+
+    word-break: break-word;
+}
+
+
+/* ================= VERIFICATION MESSAGE ================= */
+
+.verification-footer {
+    margin-top: 30px;
+
+    padding: 16px;
+
+    background: #123d27;
+
+    border: 1px solid #1f8f50;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    color: #4ade80;
+
+    font-weight: bold;
+
+    font-size: 16px;
+}
+
+.verification-footer span {
+    margin-right: 7px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    margin-top: 30px;
+
+    color: #777777;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    .certificate-card {
+        padding: 25px 20px;
+    }
+
+    .valid-box strong {
+        font-size: 20px;
+    }
+
+    .detail-row {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .label {
+        min-width: auto;
+    }
+
+    .value {
+        text-align: left;
+    }
+}
