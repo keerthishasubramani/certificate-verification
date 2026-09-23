@@ -4,223 +4,1052 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #000000;
-    min-height: 100vh;
-    color: #ffffff;
+    background: #f4f6f8;
+    color: #111;
 }
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    height: 105px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 38px;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.logo-circle {
+    width: 62px;
+    height: 62px;
+
+    border-radius: 50%;
+
+    background: #22b573;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 29px;
+}
+
+
+.logo-name {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.logo-name b {
+    color: #438f70;
+
+    font-size: 25px;
+
+    letter-spacing: -1px;
+}
+
+
+.logo-name span {
+    color: #777;
+
+    font-size: 12px;
+
+    letter-spacing: 6px;
+
+    margin-top: 2px;
+}
+
+
+/* HAMBURGER */
+
+.hamburger {
+    width: 55px;
+}
+
+
+.hamburger span {
+    display: block;
+
+    height: 7px;
+
+    background: #111;
+
+    border-radius: 5px;
+
+    margin: 7px 0;
+}
+
+
+/* =========================
+   PAGE
+========================= */
 
 .page {
     width: 100%;
-    min-height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 640px;
 
-    padding: 45px 20px;
+    margin: 0 auto;
+
+    padding: 35px 25px 70px;
+
+    background: #f8fafb;
+
+    border-left: 4px solid #24bd72;
+
+    border-right: 4px solid #24bd72;
+
+    min-height: calc(100vh - 105px);
 }
 
 
-/* ================= HEADER ================= */
+/* DEMO LABEL */
 
-header {
+.demo-label {
     text-align: center;
-    margin-bottom: 35px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    color: #777;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
 }
 
-.logo {
-    font-size: 42px;
+
+/* =========================
+   VERIFICATION SECTION
+========================= */
+
+.verification-section {
+    background: white;
+
+    padding: 30px 25px;
+
+    margin-bottom: 35px;
+
+    border-left: 5px solid #2463c8;
+
+    box-shadow:
+        0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+.verification-section h1 {
+    color: #2471cf;
+
+    font-size: 28px;
+
+    font-weight: 500;
+
     margin-bottom: 10px;
 }
 
-header h1 {
-    font-size: 48px;
-    color: #ffffff;
-    margin-bottom: 15px;
-}
 
-header p {
-    font-size: 22px;
-    color: #bdbdbd;
-}
+.verification-section p {
+    color: #666;
 
+    font-size: 16px;
 
-/* ================= CERTIFICATE CARD ================= */
-
-.certificate-card {
-    width: 100%;
-    max-width: 650px;
-
-    background: #111111;
-
-    border-radius: 20px;
-
-    padding: 45px;
-
-    border: 1px solid #333333;
-
-    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.08);
+    margin-bottom: 25px;
 }
 
 
-/* ================= VALID BOX ================= */
-
-.valid-box {
-    background: #123d27;
-
-    border: 1px solid #1f8f50;
-
-    border-radius: 16px;
-
-    padding: 25px;
-
+.certificate-input {
     display: flex;
-    justify-content: center;
-    align-items: center;
 
-    gap: 15px;
-
-    margin-bottom: 35px;
-
-    color: #4ade80;
-}
-
-.valid-box span {
-    font-size: 38px;
-    font-weight: bold;
-}
-
-.valid-box div {
-    display: flex;
     flex-direction: column;
-}
 
-.valid-box strong {
-    font-size: 24px;
-    line-height: 1.2;
+    gap: 10px;
 }
 
 
-/* ================= DETAILS ================= */
-
-.details {
-    width: 100%;
-}
-
-.detail-row {
-    display: flex;
-
-    justify-content: space-between;
-    align-items: flex-start;
-
-    gap: 25px;
-
-    padding: 22px 0;
-
-    border-bottom: 1px solid #333333;
-}
-
-.detail-row:last-child {
-    border-bottom: none;
-}
-
-.label {
-    font-size: 18px;
-    font-weight: bold;
-
-    color: #bdbdbd;
-
-    min-width: 150px;
-}
-
-.value {
-    font-size: 18px;
-
-    color: #ffffff;
-
-    text-align: right;
-
-    word-break: break-word;
-}
-
-
-/* ================= VERIFICATION MESSAGE ================= */
-
-.verification-footer {
-    margin-top: 30px;
-
-    padding: 16px;
-
-    background: #123d27;
-
-    border: 1px solid #1f8f50;
-
-    border-radius: 10px;
-
-    text-align: center;
-
-    color: #4ade80;
-
+.certificate-input label {
     font-weight: bold;
 
     font-size: 16px;
 }
 
-.verification-footer span {
-    margin-right: 7px;
+
+.certificate-input input {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    background: #f7f7f7;
+
+    color: #555;
 }
+/* =========================
+   CERTIFICATE INTRO
+========================= */
 
+.certificate-intro {
+    background: linear-gradient(
+        135deg,
+        #202b82,
+        #303f9f
+    );
 
-/* ================= FOOTER ================= */
-
-footer {
-    margin-top: 30px;
-
-    color: #777777;
-
-    font-size: 14px;
+    color: white;
 
     text-align: center;
+
+    padding: 50px 20px;
+
+    margin: 20px 0 35px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 
-/* ================= MOBILE ================= */
+.certificate-intro h1 {
+    font-size: 27px;
+
+    line-height: 1.25;
+
+    margin-bottom: 20px;
+
+    color: white;
+}
+
+
+.intro-main {
+    font-size: 20px;
+
+    line-height: 1.55;
+
+    margin-bottom: 18px;
+
+    color: #d9ddff;
+}
+
+
+.intro-small {
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    color: #d9ddff;
+}
+
+
+/* =========================
+   VERIFY SECTION
+========================= */
+
+.verification-section {
+    background: white;
+
+    padding: 30px 25px;
+
+    margin-bottom: 35px;
+
+    border-left: 5px solid #2463c8;
+
+    box-shadow:
+        0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+.verification-section h2 {
+    color: #2471cf;
+
+    font-size: 26px;
+
+    font-weight: 500;
+
+    margin-bottom: 12px;
+}
+
+
+.verification-section p {
+    color: #666;
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+}
+
+
+.certificate-input {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.certificate-input label {
+    font-weight: bold;
+
+    font-size: 16px;
+}
+
+
+.certificate-input input {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    background: #f7f7f7;
+
+    color: #555;
+}
+
+
+.verify-btn {
+    margin-top: 8px;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #20ae72;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.verify-btn:hover {
+    background: #168c5b;
+
+    transform: translateY(-1px);
+}
+
+/* VERIFY BUTTON */
+
+.verify-btn {
+    margin-top: 8px;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #20ae72;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.verify-btn:hover {
+    background: #168c5b;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   INFORMATION SECTION
+========================= */
+
+.info-section {
+    margin-bottom: 35px;
+
+    border-left: 5px solid #2463c8;
+
+    padding-left: 30px;
+}
+
+
+/* SECTION TITLE */
+
+.info-section h2 {
+    color: #2471cf;
+
+    font-size: 26px;
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+/* WHITE INFORMATION BOX */
+
+.info-box {
+    background: white;
+
+    padding: 20px 15px;
+
+    box-shadow:
+        0 1px 6px rgba(0, 0, 0, 0.04);
+}
+
+
+/* EACH ROW */
+
+.row {
+    display: grid;
+
+    grid-template-columns: 190px 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    font-size: 20px;
+
+    line-height: 1.35;
+}
+
+
+.row:last-child {
+    margin-bottom: 0;
+}
+
+
+/* LABEL */
+
+.label {
+    font-weight: 700;
+
+    color: #111;
+}
+
+
+/* NORMAL VALUE */
+
+.value {
+    color: #444;
+
+    word-break: break-word;
+}
+
+
+/* PINK VALUES */
+
+.pink-value {
+    color: #b14b82;
+
+    font-weight: 500;
+
+    word-break: break-word;
+}
+
+
+/* =========================
+   BADGES
+========================= */
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    border-radius: 9px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+.blue {
+    background: #1fc2df;
+}
+
+
+.grey {
+    background: #68717a;
+}
+
+
+.green {
+    background: #20ae72;
+}
+
+
+.success {
+    background: #16a05d;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status-box {
+    background: #e3f5ea;
+
+    padding: 25px;
+
+    display: flex;
+
+    gap: 18px;
+
+    align-items: center;
+}
+
+
+.status-icon {
+    min-width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    background: #0d774d;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+
+.status-box h3 {
+    color: #087548;
+
+    font-size: 21px;
+
+    margin-bottom: 7px;
+}
+
+
+.status-box p {
+    color: #444;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   DEMO NOTICE
+========================= */
+
+.demo-notice {
+    background: #fff8e6;
+
+    border: 1px solid #f0d98c;
+
+    padding: 18px;
+
+    margin-top: 10px;
+
+    text-align: center;
+
+    border-radius: 6px;
+
+    color: #66551f;
+}
+
+
+.demo-notice strong {
+    display: block;
+
+    margin-bottom: 7px;
+}
+
+
+.demo-notice p {
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    background: #fff;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+footer p:first-child {
+    margin-bottom: 7px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 600px) {
 
+    .header {
+        height: 90px;
+
+        padding: 0 20px;
+    }
+
+
+    .logo-circle {
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 23px;
+    }
+
+
+    .logo-name b {
+        font-size: 19px;
+    }
+
+
+    .logo-name span {
+        font-size: 8px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .hamburger {
+        width: 42px;
+    }
+
+
+    .hamburger span {
+        height: 5px;
+
+        margin: 6px 0;
+    }
+
+
     .page {
-        padding: 30px 15px;
+        width: 100%;
+
+        padding: 25px 15px 50px;
+
+        border-left-width: 3px;
+
+        border-right-width: 3px;
     }
 
-    header h1 {
-        font-size: 36px;
+
+    .verification-section {
+        padding: 25px 18px;
     }
 
-    header p {
+
+    .verification-section h1 {
+        font-size: 24px;
+    }
+
+
+    .info-section {
+        padding-left: 15px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .info-section h2 {
+        font-size: 21px;
+
+        gap: 9px;
+    }
+
+
+    .info-box {
+        padding: 18px 10px;
+    }
+
+
+    .row {
+        grid-template-columns: 1fr 1.35fr;
+
+        gap: 10px;
+
+        font-size: 17px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .badge {
+        font-size: 13px;
+
+        padding: 7px 9px;
+    }
+
+
+    .status-box {
+        padding: 20px;
+
+        align-items: flex-start;
+    }
+
+
+    .status-icon {
+        min-width: 42px;
+
+        height: 42px;
+
+        font-size: 21px;
+    }
+
+
+    .verify-btn {
+        font-size: 16px;
+
+        padding: 13px;
+    }
+
+}
+/* =========================
+   CERTIFICATE VERIFICATION INFO
+========================= */
+
+.verification-info {
+    background: #d5f5fc;
+
+    border: 2px solid #9de5f1;
+
+    border-radius: 8px;
+
+    padding: 32px 25px;
+
+    margin: 40px 0 0;
+
+    display: flex;
+
+    gap: 22px;
+
+    align-items: flex-start;
+}
+
+
+.info-icon {
+    min-width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: #075f70;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+
+.verification-info-content h2 {
+    color: #075568;
+
+    font-size: 26px;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+
+.verification-info-content p {
+    color: #075568;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+.verification-info-content strong {
+    color: #075568;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   REVIEWS SECTION
+========================= */
+
+.reviews-section {
+    background: #111a2d;
+
+    margin-top: 32px;
+
+    margin-left: -25px;
+
+    margin-right: -25px;
+
+    padding: 55px 25px 70px;
+
+    text-align: center;
+
+    border-top: 8px solid #f5d23c;
+
+    color: white;
+}
+
+
+.reviews-section h2 {
+    color: white;
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
+}
+
+
+.reviews-btn {
+    background: transparent;
+
+    color: #f5d23c;
+
+    border: 3px solid #f5d23c;
+
+    border-radius: 12px;
+
+    padding: 13px 25px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-bottom: 45px;
+}
+
+
+.reviews-btn:hover {
+    background: #f5d23c;
+
+    color: #111a2d;
+}
+
+
+/* REVIEWS */
+
+.reviews-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    text-align: left;
+}
+
+
+.review-card {
+    background: #202a40;
+
+    border: 1px solid #34405a;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    min-height: 150px;
+}
+
+
+.review-card h3 {
+    color: white;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+
+.review-card p {
+    color: #d6d9e0;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    background: #fff;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+footer p:first-child {
+    margin-bottom: 7px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .verification-info {
+        padding: 30px 20px;
+
+        gap: 18px;
+    }
+
+
+    .info-icon {
+        min-width: 45px;
+
+        height: 45px;
+
+        font-size: 25px;
+    }
+
+
+    .verification-info-content h2 {
+        font-size: 24px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .verification-info-content p {
         font-size: 18px;
+
+        line-height: 1.65;
     }
 
-    .certificate-card {
-        padding: 25px 20px;
+
+    .verification-info-content strong {
+        font-size: 19px;
     }
 
-    .valid-box strong {
-        font-size: 20px;
+
+    .reviews-section {
+        margin-left: -15px;
+
+        margin-right: -15px;
+
+        padding: 50px 20px 60px;
     }
 
-    .detail-row {
-        flex-direction: column;
 
-        gap: 8px;
+    .reviews-section h2 {
+        font-size: 25px;
     }
 
-    .label {
-        min-width: auto;
+
+    .reviews-container {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
     }
 
-    .value {
-        text-align: left;
+
+    .review-card {
+        min-height: 140px;
     }
+
 }
