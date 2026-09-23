@@ -5,85 +5,576 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Certificate Verification</title>
+    <title>Certificate Verification - Demo</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="page">
+    <!-- =========================
+         HEADER
+    ========================== -->
 
-        <!-- Header -->
-        <header>
-            <div class="logo">🎓</div>
+    <header class="header">
 
-            <h1>Certificate Verification</h1>
+        <div class="logo">
 
-            <p>
-                This certificate has been successfully verified.
-            </p>
-        </header>
-
-
-        <!-- Certificate Card -->
-        <div class="certificate-card">
-
-            <!-- Valid Badge -->
-            <div class="valid-box">
-                <span>✓</span>
-                <div>
-                    <strong>CERTIFICATE</strong>
-                    <strong>VALID</strong>
-                </div>
+            <div class="logo-circle">
+                🌐
             </div>
 
-
-            <!-- Certificate Details -->
-            <div class="details">
-
-                <div class="detail-row">
-                    <span class="label">Certificate ID</span>
-                    <span class="value">DAS-COMP-126/2026</span>
-                </div>
-
-                <div class="detail-row">
-                    <span class="label">Student Name</span>
-                    <span class="value">KEERTHISHA Subramani</span>
-                </div>
-
-                <div class="detail-row">
-                    <span class="label">Course</span>
-                    <span class="value">Computer Science & Data Science</span>
-                </div>
-
-                <div class="detail-row">
-                    <span class="label">Date Issued</span>
-                    <span class="value">22 September 2026</span>
-                </div>
-
-                <div class="detail-row">
-                    <span class="label">Organization</span>
-                    <span class="value">Your Organization</span>
-                </div>
-
-            </div>
-
-
-            <!-- Footer -->
-            <div class="verification-footer">
-                <span>✓</span>
-                Certificate verified successfully
+            <div class="logo-name">
+                <b>DATA ALCOTT</b>
+                <span>S Y S T E M S</span>
             </div>
 
         </div>
 
 
-        <footer>
-            © 2026 Certificate Verification System
-        </footer>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN PAGE
+    ========================== -->
+<!-- =========================
+     CERTIFICATE INTRO
+========================= -->
+
+<section class="certificate-intro">
+
+    <h1>
+        DATA ALCOTT<br>
+        SYSTEMS - Certificate<br>
+        Verification
+    </h1>
+
+    <p class="intro-main">
+        Verify the authenticity of
+        internship certificates issued by
+        DATA ALCOTT SYSTEMS
+    </p>
+
+    <p class="intro-small">
+        Employers and organizations can validate
+        certificates instantly using certificate
+        number or QR code
+    </p>
+
+</section>
+
+
+<!-- =========================
+     VERIFY CERTIFICATE
+========================= -->
+
+<section class="verification-section">
+
+    <h2>
+        🔍 Verify Certificate
+    </h2>
+
+    <p>
+        Enter the certificate number to verify
+        the certificate details.
+    </p>
+
+    <div class="certificate-input">
+
+        <label>
+            Certificate Number
+        </label>
+
+        <input
+            type="text"
+            id="certificateNumber"
+            value="DAS-COMP-126/2026"
+            readonly
+        >
+
+        <button
+            class="verify-btn"
+            onclick="verifyCertificate()"
+        >
+            ✓ Verify Certificate
+        </button>
 
     </div>
+
+</section>
+
+
+        <!-- =========================
+             CERTIFICATE VERIFICATION
+        ========================== -->
+
+        <section class="verification-section">
+
+            <h1>
+                Certificate Verification
+            </h1>
+
+            <p>
+                Verify internship certificate details
+            </p>
+
+
+            <div class="certificate-input">
+
+                <label>
+                    Certificate Number
+                </label>
+
+                <input
+                    type="text"
+                    id="certificateNumber"
+                    value="DAS-COMP-126/2026"
+                    readonly
+                >
+
+                <button
+                    class="verify-btn"
+                    onclick="verifyCertificate()"
+                >
+                    ✓ Verify Certificate
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             VERIFICATION STATUS
+        ========================== -->
+
+        <section
+            class="info-section status-section"
+            id="verificationStatus"
+        >
+
+            <h2>
+                ✓ Verification Status
+            </h2>
+
+            <div class="status-box">
+
+                <div class="status-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <h3>
+                        Certificate Verified
+                    </h3>
+
+                    <p>
+                        The certificate information shown
+                        below is available for this demo
+                        verification page.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INTERN INFORMATION
+        ========================== -->
+
+        <section class="info-section">
+
+            <h2>
+                🎓 Intern Information
+            </h2>
+
+
+            <div class="info-box">
+
+                <div class="row">
+
+                    <div class="label">
+                        Intern Name:
+                    </div>
+
+                    <div class="value">
+                        KEERTHISHA Subramani
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="label">
+                        Student Code:
+                    </div>
+
+                    <div class="pink-value">
+                        DAS008788
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="label">
+                        Registration No:
+                    </div>
+
+                    <div class="pink-value">
+                        RCAS2025BDS040
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="label">
+                        Email:
+                    </div>
+
+                    <div class="value">
+                        keerthishasubramani@gmail.com
+                    </div>
+
+                </div>
+
+
+                
+
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CERTIFICATE DETAILS
+        ========================== -->
+
+        <section class="info-section">
+
+            <h2>
+                🏅 Certificate Details
+            </h2>
+
+
+            <div class="info-box">
+
+                <div class="row">
+
+                    <div class="label">
+                        Certificate Number:
+                    </div>
+
+                    <div class="pink-value">
+                        DAS-COMP-126/2026
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="label">
+                        Certificate Type:
+                    </div>
+
+                    <div>
+                        <span class="badge blue">
+                            Completion certificate
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="label">
+                        Domain:
+                    </div>
+
+                    <div>
+                        <span class="badge grey">
+                            Web Development
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="label">
+                        Task ID:
+                    </div>
+
+                    <div class="pink-value">
+                        WD-EC-005
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="label">
+                        Issue Date:
+                    </div>
+
+                    <div class="value">
+                        September 22, 2026
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="label">
+                        Valid From:
+                    </div>
+
+                    <div class="value">
+                        September 1, 2026
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="label">
+                        Valid Until:
+                    </div>
+
+                    <div class="value">
+                        September 22, 2026
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="label">
+                        Internship Mode:
+                    </div>
+
+                    <div>
+                        <span class="badge green">
+                            Remote
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="label">
+                        Status:
+                    </div>
+
+                    <div>
+                        <span class="badge success">
+                            Issued
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INTERN MANAGER DETAILS
+        ========================== -->
+
+        <section class="info-section">
+
+            <h2>
+                👨‍💼 Issuing Authority
+            </h2>
+
+
+            <div class="info-box">
+
+                <div class="row">
+
+                    <div class="label">
+                        Manager Name:
+                    </div>
+
+                    <div class="value">
+                        Gokul Rajan
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="label">
+                        Signed By:
+                    </div>
+
+                    <div class="value">
+                        Thirumalai Kumar
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="label">
+                        Organization:
+                    </div>
+
+                    <div class="value">
+                        DATA ALCOTT SYSTEMS
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+       
+
+    </main>
+
+
+    
+   
+    <!-- =========================
+     CERTIFICATE VERIFICATION INFORMATION
+========================= -->
+
+<section class="verification-info">
+
+    <div class="info-icon">
+        ℹ
+    </div>
+
+    <div class="verification-info-content">
+
+        <h2>
+            Certificate Verification<br>
+            Information
+        </h2>
+
+        <p>
+            This verification confirms that
+            the certificate is authentic and
+            was issued by DATA ALCOTT SYSTEMS.
+        </p>
+
+        <p>
+            For any questions or concerns
+            about this certificate, please
+            contact:
+        </p>
+
+        <strong>
+            mail@freeinternships.in
+        </strong>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTERN REVIEWS
+========================= -->
+
+<section class="reviews-section">
+
+    <h2>
+        ⭐
+        What Our Interns Say
+    </h2>
+
+    <button class="reviews-btn">
+        View All Reviews →
+    </button>
+
+
+    <div class="reviews-container">
+
+        <div class="review-card">
+
+            <h3>
+                Singh Rathore
+            </h3>
+
+            <p>
+                Great internship experience
+                and valuable learning opportunity.
+            </p>
+
+        </div>
+
+
+        <div class="review-card">
+
+            <h3>
+                Cherul
+            </h3>
+
+            <p>
+                Good experience and helpful
+                internship program.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        DATA ALCOTT SYSTEMS
+    </p>
+
+    <p>
+        © 2026
+    </p>
+
+</footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 
